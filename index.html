@@ -128,6 +128,8 @@
   footer { background: #0a0c0f; color: #8a94a0; padding: 34px 0; font-size: .88rem; }
   footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   footer a { color: #c4cbd3; }
+  .foot-meta { margin-top: 4px; }
+  .foot-links a { margin-left: 18px; }
 
   @media (max-width: 800px) {
     .experts { grid-template-columns: 1fr; gap: 28px; }
@@ -147,6 +149,7 @@
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#approach">Approach</a>
+      <a href="#about">About</a>
       <a href="#experts">Experts</a>
       <a href="#partners">Partners</a>
       <a href="#interest" class="cta">Express Interest</a>
@@ -173,28 +176,6 @@
     <h2>What We Provide</h2>
     <p class="section-sub">Deep expertise built over decades in open source, infrastructure, and population-scale digital systems.</p>
     <div class="grid">
-      <div class="card">
-        <span class="tag">DPI</span>
-        <h3>Digital Public Infrastructure</h3>
-        <p>Design, integration, and rollout of DPI stacks — Beckn, ONEST, BlueDot, NFH, and Finternet — for open networks in commerce, education, health, and finance.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Open Source</span>
-        <h3>Open Source Strategy &amp; Engineering</h3>
-        <p>Leadership experience from the Linux Foundation and Red Hat ecosystems. Open-source adoption, contribution strategy, community building, and enterprise-grade OSS engineering.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Trust &amp; Web3</span>
-        <h3>Trust Layer &amp; Verifiable Credentials</h3>
-        <p>Solutioning and integration on the CORD blockchain and trust layer — verifiable credentials, registries, and tamper-proof data exchange. Choose the ledger that fits your use case.</p>
-        <div class="chips"><span class="chip">CORD</span><span class="chip">LFDT Hyperledger</span><span class="chip">Polygon</span><span class="chip">Solana</span></div>
-      </div>
-      <div class="card">
-        <span class="tag">Digital Assets</span>
-        <h3>RWA Tokenization</h3>
-        <p>Real-world asset tokenization solutions: architecture, ledger integration, and compliance-aware product design — on the chain that suits the asset and the regulator.</p>
-        <div class="chips"><span class="chip">CORD</span><span class="chip">Hyperledger</span><span class="chip">Polygon</span><span class="chip">Solana</span></div>
-      </div>
       <div class="card">
         <span class="tag">Infrastructure</span>
         <h3>Distributed Systems &amp; Storage</h3>
@@ -225,6 +206,28 @@
         <h3>Infrastructure Solutioning</h3>
         <p>Full-stack infrastructure design and deployment: cloud, on-premise, and hybrid — covering software, operations, and lifecycle management.</p>
       </div>
+      <div class="card">
+        <span class="tag">DPI</span>
+        <h3>Digital Public Infrastructure</h3>
+        <p>Design, integration, and rollout of DPI stacks — Beckn, ONEST, BlueDot, NFH, and Finternet — for open networks in commerce, education, health, and finance.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Open Source</span>
+        <h3>Open Source Strategy &amp; Engineering</h3>
+        <p>Leadership experience from the Linux Foundation and Red Hat ecosystems. Open-source adoption, contribution strategy, community building, and enterprise-grade OSS engineering.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Trust &amp; Web3</span>
+        <h3>Trust Layer &amp; Verifiable Credentials</h3>
+        <p>Solutioning and integration on the trust layer — verifiable credentials, registries, and tamper-proof data exchange. Choose the ledger that fits your use case.</p>
+        <div class="chips"><span class="chip">LFDT Hyperledger</span><span class="chip">Polygon</span><span class="chip">CORD</span><span class="chip">Solana</span></div>
+      </div>
+      <div class="card">
+        <span class="tag">Digital Assets</span>
+        <h3>RWA Tokenization</h3>
+        <p>Real-world asset tokenization solutions: architecture, ledger integration, and compliance-aware product design — on the chain that suits the asset and the regulator.</p>
+        <div class="chips"><span class="chip">Blockchain / Web3</span><span class="chip">Hyperledger</span><span class="chip">Polygon</span><span class="chip">Solana</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -250,6 +253,36 @@
       <div class="step">
         <h3>Deploy &amp; Support</h3>
         <p>Production deployment — cloud or on-premise — with ongoing operations and support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <span class="eyebrow">About</span>
+    <h2>Built by people who have shipped at scale</h2>
+    <p class="section-sub">ProductEazy is led by practitioners with decades of hands-on experience in open source, infrastructure, and population-scale digital systems. We have built and operated these systems, not just advised on them.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Open Source</span>
+        <h3>Linux Foundation &amp; Red Hat ecosystems</h3>
+        <p>Leadership experience in open-source communities and enterprise open-source engineering, from contribution strategy to production-grade platforms.</p>
+      </div>
+      <div class="card">
+        <span class="tag">DPI</span>
+        <h3>Population-scale digital infrastructure</h3>
+        <p>Hands-on work with open networks and public digital infrastructure, including Beckn, ONEST, BlueDot, NFH, and Finternet.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Systems</span>
+        <h3>Distributed systems &amp; storage</h3>
+        <p>Deep background in filesystems, storage, and distributed systems: architecture, performance, and hardening for production.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Web3 &amp; AI</span>
+        <h3>Trust layers, ledgers &amp; applied AI</h3>
+        <p>Practical delivery across blockchain and verifiable-credential platforms and AI solutions fitted to real product requirements.</p>
       </div>
     </div>
   </div>
@@ -339,15 +372,23 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit Interest</button>
       <p id="form-status" role="status"></p>
-      <p class="form-note">We use your details only to respond to your inquiry.</p>
+      <p class="form-note">We use your details only to respond to your inquiry. See our <a href="privacy.html" style="color:#c4cbd3">Privacy Policy</a>.</p>
     </form>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <div>© 2026 ProductEazy. All rights reserved.</div>
-    <div><a href="#interest">Contact</a></div>
+    <div class="foot-main">
+      <div>© 2026 ProductEazy. All rights reserved.</div>
+      <div class="foot-meta">GSTIN: 29AARCP5646H1ZQ</div>
+      <div class="foot-meta">Grievances &amp; legal notices: <a href="mailto:contact@producteazy.com">contact@producteazy.com</a></div>
+    </div>
+    <div class="foot-links">
+      <a href="#interest">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </div>
   </div>
 </footer>
 
