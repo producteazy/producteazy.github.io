@@ -115,24 +115,16 @@
   .partner p { font-size: .92rem; color: var(--muted); margin: 8px 0 12px; }
   .partner a { font-size: .9rem; font-weight: 600; }
 
-  /* Form */
-  #interest { background: var(--ink); color: #fff; }
-  #interest h2 { color: #fff; }
-  #interest .eyebrow { color: var(--blue); }
-  #interest .section-sub { color: #aab3bd; }
-  form { max-width: 620px; }
-  .field { margin-bottom: 18px; }
-  label { display: block; font-size: .88rem; font-weight: 600; margin-bottom: 6px; color: #dfe4ea; }
-  input, select, textarea { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #3a424c; background: #1a1f26; color: #fff; font-size: .97rem; font-family: inherit; }
-  input::placeholder, textarea::placeholder { color: #727c88; }
-  input:focus, select:focus, textarea:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
-  textarea { min-height: 110px; resize: vertical; }
-  #interest .btn-primary { background: var(--blue); border-color: var(--blue); color: var(--ink); }
-  #interest .btn-primary:hover { background: #fff; border-color: #fff; }
-  .form-note { font-size: .82rem; color: #8a94a0; margin-top: 14px; }
-  #form-status { margin-top: 14px; font-weight: 600; display: none; }
-  #form-status.ok { display: block; color: #7fe0a7; }
-  #form-status.err { display: block; color: #ff9d9d; }
+  /* Contact */
+  #contact { background: var(--ink); color: #fff; }
+  #contact h2 { color: #fff; }
+  #contact .eyebrow { color: var(--blue); }
+  #contact .section-sub { color: #aab3bd; }
+  #contact a { color: var(--blue); }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; max-width: 760px; }
+  .contact-grid h3 { font-size: 1rem; color: #aab3bd; font-weight: 500; margin-bottom: 6px; }
+  .contact-grid p { font-size: 1.1rem; line-height: 1.6; }
+  .form-note { font-size: .82rem; color: #8a94a0; margin-top: 28px; }
 
   footer { background: #0a0c0f; color: #8a94a0; padding: 34px 0; font-size: .88rem; }
   footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -168,7 +160,7 @@
       <a href="#about">About</a>
       <a href="#experts">Experts</a>
       <a href="#partners">Partners</a>
-      <a href="#interest" class="cta">Express Interest</a>
+      <a href="#contact" class="cta">Get in Touch</a>
     </div>
   </div>
 </nav>
@@ -179,7 +171,7 @@
     <h1>Solutioning at scale — from <em>idea to production</em>, one partner.</h1>
     <p class="lede">ProductEazy delivers end-to-end technology solutions: Digital Public Infrastructure, open-source platforms, distributed systems, trust layers, and AI — with the full software stack, deployment, and operations covered through our partner network.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#interest">Express Interest</a>
+      <a class="btn btn-primary" href="#contact">Get in Touch</a>
       <a class="btn btn-ghost" href="#services">What We Do</a>
     </div>
     <p class="hint">Move your cursor — everything connects</p>
@@ -314,8 +306,8 @@
         <div class="expert-list">
           <button type="button">DPI &amp; Open Networks</button><button type="button">Open Source</button><button type="button">Blockchain &amp; Trust</button><button type="button">Tokenization</button><button type="button">Distributed Systems</button><button type="button">Applied AI</button><button type="button">ERP &amp; Ticketing</button><button type="button">Workforce</button><button type="button">Energy</button><button type="button">Infrastructure</button>
         </div>
-        <a class="btn btn-primary" id="request-expert" href="#interest">Request an Expert</a>
-        <p class="pick-hint">Tap the areas you need first — we'll prefill the form for you.</p>
+        <a class="btn btn-primary" id="request-expert" href="mailto:contact@producteazy.com?subject=Expert%20request">Request an Expert</a>
+        <p class="pick-hint">Tap the areas you need first — we'll prefill an email for you.</p>
       </div>
       <div class="models">
         <div class="model"><h3>Advisory &amp; consultation</h3><p>Architecture reviews, strategy sessions, and second opinions from people who have shipped at scale.</p></div>
@@ -346,50 +338,22 @@
   </div>
 </section>
 
-<section id="interest">
+<section id="contact">
   <div class="container">
     <span class="eyebrow">Contact</span>
-    <h2>Express Interest</h2>
-    <p class="section-sub">Tell us what you're building or the problem you need solved. We'll get back to you.</p>
-    <form id="interest-form" action="https://formspree.io/f/mqevvydl" method="POST">
-      <div class="field">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required>
+    <h2>Get in Touch</h2>
+    <p class="section-sub">Tell us what you're building or the problem you need solved. Write to us and we'll get back to you.</p>
+    <div class="contact-grid">
+      <div>
+        <h3>Email</h3>
+        <p><a href="mailto:contact@producteazy.com">contact@producteazy.com</a></p>
       </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+      <div>
+        <h3>Registered office</h3>
+        <p>ProductEazy Tech Solutions Private Limited<br>#24, 2nd Cross, Sharada Nagar,<br>Bengaluru, 560061</p>
       </div>
-      <div class="field">
-        <label for="company">Company / Organization</label>
-        <input type="text" id="company" name="company" placeholder="Company name (optional)">
-      </div>
-      <div class="field">
-        <label for="area">Area of Interest</label>
-        <select id="area" name="area_of_interest" required>
-          <option value="" disabled selected>Select an area</option>
-          <option>Digital Public Infrastructure (Beckn / ONEST / BlueDot / NFH / Finternet)</option>
-          <option>Open Source Strategy &amp; Engineering</option>
-          <option>Trust Layer / Verifiable Credentials (CORD / Hyperledger / Polygon / Solana)</option>
-          <option>RWA Tokenization</option>
-          <option>Distributed Systems / Filesystem / Storage</option>
-          <option>Applied AI Solutions</option>
-          <option>ERP &amp; Ticketing Systems</option>
-          <option>Workforce Management</option>
-          <option>Power &amp; Energy Software</option>
-          <option>Infrastructure Solutioning</option>
-          <option>Expert Consultation / Outsourced Talent</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="message">Tell us more</label>
-        <textarea id="message" name="message" placeholder="Briefly describe your problem or project..." required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit Interest</button>
-      <p id="form-status" role="status"></p>
-      <p class="form-note">We use your details only to respond to your inquiry. See our <a href="privacy.html" style="color:#c4cbd3">Privacy Policy</a>.</p>
-    </form>
+    </div>
+    <p class="form-note">We use your details only to respond to your inquiry. See our <a href="privacy.html" style="color:#c4cbd3">Privacy Policy</a>.</p>
   </div>
 </section>
 
@@ -401,7 +365,7 @@
       <div class="foot-meta">Registered office: #24, 2nd Cross, Sharada Nagar, Bengaluru, 560061</div>
     </div>
     <div class="foot-links">
-      <a href="#interest">Contact</a>
+      <a href="#contact">Contact</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms &amp; Conditions</a>
     </div>
@@ -433,7 +397,7 @@
     const cv = document.getElementById('net');
     const ctx = cv.getContext('2d');
     const hero = cv.parentElement;
-    const words = ['Beckn','ONEST','BlueDot','NFH','Finternet','CORD','Hyperledger','Polygon','Solana','Linux','Open Source','Storage','Filesystem','AI','ERP','Energy','Workforce','RWA','Credentials','Cloud','Ledger','Identity','Registry','Ticketing'];
+      const words = ['Beckn','ONEST','BlueDot','NFH','Finternet','CORD','Hyperledger','Polygon','Solana','Linux','Open Source','Storage','Filesystem','AI','ERP','Energy','Workforce','RWA','Credentials','Cloud','Ledger','Identity','Registry','Ticketing', 'Smart Meter', 'CCMS', 'GlusterFS', 'FinTech', 'AgriTech', 'GovTech', 'Web IoT', 'HRTech', 'Energy'];
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let W, H, nodes = [], mouse = { x: -999, y: -999, on: false };
@@ -510,15 +474,15 @@
   })();
 
 
-  // "Request an Expert" jumps to the form with area and message prefilled.
+  // "Request an Expert" opens an email prefilled with the selected areas.
   document.querySelectorAll('.expert-list button').forEach(b => b.addEventListener('click', () => b.classList.toggle('on')));
-  document.getElementById('request-expert').addEventListener('click', () => {
+  document.getElementById('request-expert').addEventListener('click', (e) => {
+    e.preventDefault();
     const picked = [...document.querySelectorAll('.expert-list button.on')].map(b => b.textContent);
-    document.getElementById('area').value = 'Expert Consultation / Outsourced Talent';
-    const msg = document.getElementById('message');
-    msg.value = 'We need experts on payroll for ' + (picked.length ? picked.join(', ') : '[area / skills]') +
+    const body = 'We need experts for ' + (picked.length ? picked.join(', ') : '[area / skills]') +
       '.\n\nEngagement type (advisory / embedded / project squad): \nTeam size & duration: \nStart date: ';
-    setTimeout(() => msg.focus({ preventScroll: true }), 600);
+    window.location.href = 'mailto:contact@producteazy.com?subject=' + encodeURIComponent('Expert request') +
+      '&body=' + encodeURIComponent(body);
   });
 
   // Card spotlight follows the pointer.
@@ -528,33 +492,6 @@
       c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
       c.style.setProperty('--my', (e.clientY - r.top) + 'px');
     });
-  });
-</script>
-
-<script>
-  // Async form submit so visitors stay on the page.
-  const form = document.getElementById('interest-form');
-  const status = document.getElementById('form-status');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    status.className = '';
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        form.reset();
-        status.textContent = 'Thank you — we received your interest and will be in touch.';
-        status.className = 'ok';
-      } else {
-        throw new Error('Bad response');
-      }
-    } catch {
-      status.textContent = 'Something went wrong. Please email us directly.';
-      status.className = 'err';
-    }
   });
 </script>
 
