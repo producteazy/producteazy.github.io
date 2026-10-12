@@ -6,12 +6,21 @@
 <title>ProductEazy — Solutioning at Scale</title>
 <meta name="description" content="ProductEazy: end-to-end technology solutioning — Digital Public Infrastructure, open source, distributed systems, trust layers, and AI solutions. From consultation to deployment.">
 <link rel="icon" href="logo.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM9HEE3PSL"></script>
 <script>
+  // Google Analytics loads only after the visitor accepts analytics cookies.
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GM9HEE3PSL');
+  function loadAnalytics() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    var el = document.createElement('script');
+    el.async = true;
+    el.src = 'https://www.googletagmanager.com/gtag/js?id=G-GM9HEE3PSL';
+    document.head.appendChild(el);
+    gtag('js', new Date());
+    gtag('config', 'G-GM9HEE3PSL');
+  }
+  try { if (localStorage.getItem('pe-cookie-consent') === 'accepted') loadAnalytics(); } catch (e) {}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -130,6 +139,13 @@
   footer a { color: #c4cbd3; }
   .foot-meta { margin-top: 4px; }
   .foot-links a { margin-left: 18px; }
+
+  /* Cookie banner */
+  #cookie-banner { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 50; max-width: 720px; margin: 0 auto; background: var(--ink); color: #dfe4ea; border-radius: 14px; padding: 16px 20px; display: none; gap: 16px; align-items: center; flex-wrap: wrap; box-shadow: 0 8px 30px rgba(0,0,0,.25); font-size: .88rem; }
+  #cookie-banner p { flex: 1 1 320px; }
+  #cookie-banner a { color: var(--blue); }
+  #cookie-banner .btn { padding: 8px 18px; font-size: .88rem; border-color: #3a424c; color: #fff; background: transparent; }
+  #cookie-banner .btn.accept { background: var(--blue); border-color: var(--blue); color: var(--ink); }
 
   @media (max-width: 800px) {
     .experts { grid-template-columns: 1fr; gap: 28px; }
@@ -380,9 +396,9 @@
 <footer>
   <div class="container">
     <div class="foot-main">
-      <div>© 2026 ProductEazy. All rights reserved.</div>
-      <div class="foot-meta">GSTIN: 29AARCP5646H1ZQ</div>
-      <div class="foot-meta">Grievances &amp; legal notices: <a href="mailto:contact@producteazy.com">contact@producteazy.com</a></div>
+      <div>© 2026 ProductEazy Tech Solutions Private Limited. All rights reserved.</div>
+      <div class="foot-meta">CIN: U62010KA2026PTC228626 · GSTIN: 29AARCP5646H1ZQ</div>
+      <div class="foot-meta">Registered office: #24, 2nd Cross, Sharada Nagar, Bengaluru, 560061</div>
     </div>
     <div class="foot-links">
       <a href="#interest">Contact</a>
@@ -391,6 +407,25 @@
     </div>
   </div>
 </footer>
+
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <p>We use Google Analytics cookies to understand how this site is used. They are set only if you accept. See our <a href="privacy.html#cookies">Privacy Policy</a>.</p>
+  <div><button type="button" class="btn" id="cookie-decline">Decline</button> <button type="button" class="btn accept" id="cookie-accept">Accept</button></div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookie-banner'), v = null;
+    try { v = localStorage.getItem('pe-cookie-consent'); } catch (e) {}
+    if (!v) b.style.display = 'flex';
+    function set(val) {
+      try { localStorage.setItem('pe-cookie-consent', val); } catch (e) {}
+      b.style.display = 'none';
+      if (val === 'accepted') loadAnalytics();
+    }
+    document.getElementById('cookie-accept').onclick = function () { set('accepted'); };
+    document.getElementById('cookie-decline').onclick = function () { set('declined'); };
+  })();
+</script>
 
 <script>
   // Cursor-driven network in the hero: topic nodes drift, and link up around the pointer.
