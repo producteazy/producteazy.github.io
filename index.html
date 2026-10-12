@@ -111,6 +111,8 @@
   /* Partners */
   .partners { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
   .partner { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; }
+  .partner-logo { height: 64px; display: flex; align-items: center; margin-bottom: 16px; }
+  .partner-logo img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; mix-blend-mode: multiply; }
   .partner h3 { font-size: 1.15rem; }
   .partner p { font-size: .92rem; color: var(--muted); margin: 8px 0 12px; }
   .partner a { font-size: .9rem; font-weight: 600; }
@@ -325,14 +327,22 @@
     <p class="section-sub">We partner with focused product companies so every engagement delivers a complete, production-ready experience.</p>
     <div class="partners">
       <div class="partner">
+        <div class="partner-logo"><img src="partners/jnanikai.jpg" alt="Jnanik.AI logo"></div>
         <h3>Jnanik.AI</h3>
         <p>AI products and applied intelligence solutions.</p>
         <a href="https://jnanikai.com/" target="_blank" rel="noopener">jnanikai.com →</a>
       </div>
       <div class="partner">
+        <div class="partner-logo"><img src="partners/solveeasy.png" alt="SolveEasy logo"></div>
         <h3>SolveEasy</h3>
         <p>Software solutions and product engineering.</p>
         <a href="https://solveeasy.in" target="_blank" rel="noopener">solveeasy.in →</a>
+      </div>
+      <div class="partner">
+        <div class="partner-logo"><img src="partners/evolugics.svg" alt="Evolugics logo"></div>
+        <h3>Evolugics</h3>
+        <p>Transforming Ideas into Innovation.</p>
+        <a href="https://evolugics.com/" target="_blank" rel="noopener">evolugics.com →</a>
       </div>
     </div>
   </div>
