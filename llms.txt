@@ -1,0 +1,33 @@
+# ProductEazy
+
+> ProductEazy Tech Solutions Private Limited (Bengaluru, India) delivers end-to-end technology solutioning: consultation, architecture, software stack, deployment and support. Specialities are Digital Public Infrastructure (DPI), open source, distributed systems and storage, trust layers and verifiable credentials, RWA tokenization, and applied AI. It also provides an expert network for advisory, embedded specialists and project squads.
+
+## What we do
+- Distributed Systems & Storage: consultation on distributed systems, filesystems and storage layers; architecture reviews and production hardening.
+- Applied AI Solutions: AI fitted to product requirements, from data pipelines to deployed models, across manufacturing, industry and enterprise.
+- ERP & Ticketing Systems: deployment, customization and integration.
+- Workforce Management: scheduling, attendance, field-force tracking, payroll integrations.
+- Power & Energy Software: monitoring, optimization and integration for the energy sector.
+- Infrastructure Solutioning: cloud, on-premise and hybrid design and deployment.
+- Digital Public Infrastructure: Beckn, ONEST, BlueDot, NFH and Finternet stacks for open networks in commerce, education, health and finance.
+- Open Source Strategy & Engineering: adoption, contribution strategy, community building, enterprise OSS engineering (Linux Foundation and Red Hat ecosystem experience).
+- Trust Layer & Verifiable Credentials: LFDT Hyperledger, Polygon, CORD, Solana.
+- RWA Tokenization: architecture, ledger integration and compliance-aware product design.
+
+## Engagement models
+- Advisory & consultation; embedded specialists; project squads.
+
+## Pages
+- [Home](https://producteazy.com/): services, approach, expert network, partners, contact
+- [Privacy Policy](https://producteazy.com/privacy.html)
+- [Terms & Conditions](https://producteazy.com/terms.html)
+
+## Partners
+- [Jnanik.AI](https://jnanikai.com/): AI products and applied intelligence
+- [SolveEasy](https://solveeasy.in): software solutions and product engineering
+- [Evolugics](https://evolugics.com/): ideas to innovation
+
+## Contact
+- Email: contact@producteazy.com
+- LinkedIn: https://www.linkedin.com/company/producteazy
+- Registered office: #24, 2nd Cross, Sharada Nagar, Bengaluru, 560061, India
