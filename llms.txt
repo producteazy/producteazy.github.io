@@ -25,6 +25,10 @@
 - [SolveEasy](https://solveeasy.in): software solutions and product engineering
 - [Evolugics](https://evolugics.com/): ideas to innovation
 
+## Languages and brochure
+- The site is available in English, Kannada, Hindi, Japanese, Arabic and German (add ?lang=ja etc., or it follows the browser language).
+- Company brochure (PDF): https://producteazy.com/brochure/ProductEazy-Brochure-en.pdf (also -ja, -de, -hi, -kn, -ar)
+
 ## Contact
 - Email: contact@producteazy.com
 - LinkedIn: https://www.linkedin.com/company/producteazy
